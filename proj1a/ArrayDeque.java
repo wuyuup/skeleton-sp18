@@ -69,6 +69,9 @@ public class ArrayDeque <T> {
     }
 
     public T removeFirst() {
+        if (size == 0) {
+            return null;
+        }
         T res = items[first];
         items[first] = null;
         first = (first + 1) % items.length;
@@ -82,6 +85,9 @@ public class ArrayDeque <T> {
     }
 
     public T removeLast() {
+        if (size == 0) {
+            return null;
+        }
         // find pos for the last item
         last = Math.floorMod(last - 1, items.length);
         T res = items[last];

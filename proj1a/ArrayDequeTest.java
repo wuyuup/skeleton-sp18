@@ -86,6 +86,10 @@ public class ArrayDequeTest {
         // addRemoveTest();
 
         ArrayDeque<Integer> ad = new ArrayDeque<>();
+        ad.removeFirst();
+        ad.removeLast();
+        System.out.println(ad.size());
+        ad.printDeque();
         for (int i = 1; i <= 8; ++i) {
             ad.addFirst(i);
             ad.addLast(-i);

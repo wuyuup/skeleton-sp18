@@ -1,4 +1,4 @@
-public class ArrayDeque <T> {
+public class ArrayDeque<T> {
     private int size;
     private T[] items = (T[]) new Object[8];
     private int first; // position of first element is first
@@ -14,9 +14,8 @@ public class ArrayDeque <T> {
         T[] tmpItems = (T[]) new Object[cap];
         if (first + size <= items.length) {
             System.arraycopy(items, first, tmpItems, 0, size);
-        }
-        else {
-            System.arraycopy(items, first, tmpItems, 0, size-first);
+        } else {
+            System.arraycopy(items, first, tmpItems, 0, size - first);
             System.arraycopy(items, 0, tmpItems, size - first, last);
         }
         items = tmpItems;
@@ -104,5 +103,4 @@ public class ArrayDeque <T> {
     public T get(int index) {
         return items[(first + index) % items.length];
     }
-
 }

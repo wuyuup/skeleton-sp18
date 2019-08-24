@@ -75,7 +75,7 @@ public class ArrayDeque <T> {
         size -= 1;
 
         // rescale if needed
-        if (size <= items.length * 0.25) {
+        if (size + 2 <= items.length * 0.25) {
             resize(items.length / 2);
         }
         return res;
@@ -89,7 +89,7 @@ public class ArrayDeque <T> {
         size -= 1;
 
         // rescale if needed
-        if (size <= items.length * 0.25) {
+        if (size + 2 <= items.length * 0.25) {
             resize(items.length / 2);
         }
         return res;

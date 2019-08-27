@@ -41,7 +41,7 @@ public class ArrayDeque<T> implements Deque<T> {
             resize(size * 2);
         }
 
-        // last is exactly the pos for new item
+        /** last is exactly the pos for new item. */
         items[last] = item;
         last = Math.floorMod(last + 1, items.length);
         size += 1;
@@ -63,10 +63,10 @@ public class ArrayDeque<T> implements Deque<T> {
         while (i != last) {
             System.out.print(items[i]);
             System.out.print(" ");
-            // update counter
+            /** update counter. */
             i = (i + 1) % items.length;
         }
-        // print empty line
+        /** print empty line. */
         System.out.println();
     }
 
@@ -80,7 +80,7 @@ public class ArrayDeque<T> implements Deque<T> {
         first = (first + 1) % items.length;
         size -= 1;
 
-        // rescale if needed
+        /** rescale if needed. */
         if (size + 2 <= items.length * 0.25) {
             resize(items.length / 2);
         }
@@ -92,13 +92,13 @@ public class ArrayDeque<T> implements Deque<T> {
         if (size == 0) {
             return null;
         }
-        // find pos for the last item
+        /** find pos for the last item. */
         last = Math.floorMod(last - 1, items.length);
         T res = items[last];
         items[last] = null;
         size -= 1;
 
-        // rescale if needed
+        /** rescale if needed. */
         if (size + 2 <= items.length * 0.25) {
             resize(items.length / 2);
         }

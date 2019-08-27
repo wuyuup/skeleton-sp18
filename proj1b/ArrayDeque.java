@@ -1,4 +1,4 @@
-public class ArrayDeque<T> implements Deque<T>{
+public class ArrayDeque<T> implements Deque<T> {
     private int size;
     private T[] items = (T[]) new Object[8];
     private int first; // position of first element is first

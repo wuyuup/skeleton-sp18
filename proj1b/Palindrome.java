@@ -39,7 +39,7 @@ public class Palindrome {
      * @param cc charcomp, see *.java
      * @return true or false
      */
-    public boolean isPalindrome(Deque<Character> d, CharacterComparator cc) {
+    private boolean isPalindrome(Deque<Character> d, CharacterComparator cc) {
         if (d.size() <= 1) {
             return true;
         }

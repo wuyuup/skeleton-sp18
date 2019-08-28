@@ -5,6 +5,9 @@ public class StudentArrayDequeLauncher {
     public static void main(String[] args) {
         StudentArrayDeque<Integer> sad1 = new StudentArrayDeque<>();
 
+        sad1.addFirst(10);
+        sad1.printDeque();
+
         for (int i = 0; i < 10; i += 1) {
             double numberBetweenZeroAndOne = StdRandom.uniform();
 
